@@ -23,7 +23,38 @@ $testi = [
     ];
 ?>
 
- <?php foreach($testi as $testo) { ?>
-    <h1> <?php echo $testo['titolo']; ?> </h1>
-    <p> <?php echo $testo['paragrafo']; ?></p>
- <?php } ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Google Faq</title>
+ </head>
+
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <ul class="menu">
+            <li><a href="">Informazioni</a></li>
+            <li><a href="">Piani</a></li>
+            <li><a href="">Assistenza</a></li>
+            <li><a href="">VPN</a></li>
+        </ul>
+    </div>
+</header>
+ <section class="main-section">
+     <div class="container-faq">
+     <?php foreach($testi as $testo) { ?>
+        <h1> <?php echo $testo['titolo']; ?> </h1>
+        <p> <?php echo $testo['paragrafo']; ?></p>
+        <?php } ?>
+     </div>
+ </section> 
+</body>
+</html>
